@@ -21,6 +21,10 @@ pipeline {
                 }
             }
         }
-
+        stage('Update AWS AUTH Config') {
+            steps {
+                sh 'kubectl patch configmap aws-auth -n kube-system --patch "$(cat aws-auth-cm.yaml)"'
+            }
+        }
     }
 }
