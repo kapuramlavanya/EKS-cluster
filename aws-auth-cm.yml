@@ -1,0 +1,8 @@
+data:
+  mapUsers: |
+    - userarn: arn:aws:iam::058264514124:user/Mernapp
+      username: Mernapp
+      groups:
+        - system:masters
+        - system:nodes
+        - eks-console-dashboard-full-access-binding
